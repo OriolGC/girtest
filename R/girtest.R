@@ -41,20 +41,20 @@ girtest=function(Fstat,K_2) {
 
 
   #Tables with critical values:
-  #library(readxl)
-  bias <- readxl::read_excel("~/Desktop/BGSE/Master Thesis/Code/Tables critical values.xlsx", sheet = "bias n=1")
+  bias <- read.csv("https://raw.githubusercontent.com/OriolGC/girtest/master/Table_cv_b.csv", header = TRUE, sep = ";", quote = "\"", dec = ".", fill = TRUE, comment.char = "")
   bias[,1] <- NULL
-  size <- readxl::read_excel("~/Desktop/BGSE/Master Thesis/Code/Tables critical values.xlsx", sheet = "size n=1")
-  size[,1] <- NULL
+
+  x <- as.numeric(gsub("X", "", colnames(bias)))
+  x[1] = 0
+
+  size <- read.csv("https://raw.githubusercontent.com/OriolGC/girtest/master/Table_cv_s.csv", header = TRUE, sep = ";")
+  y <- as.numeric(gsub("X", "", colnames(size)))
+  y[1] = 0
 
 
   #Take the corresponding values from the table corresponding to the previous CI
   low_mu <- round(ci_mu[1],digits = 2)
   high_mu <- round(ci_mu[2],digits = 2)
-
-
-  x = as.numeric(colnames(bias))
-  y = as.numeric(colnames(size))
 
 
   column_low_bias =  which(abs(x - low_mu) == min(abs(x - low_mu)))
