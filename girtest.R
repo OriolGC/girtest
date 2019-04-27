@@ -26,7 +26,7 @@ girtest=function(Fstat,K_2) {
   alpha <- 0.05                                               #Tables in Ganics et al. (2018) only for 5% nomial level
   p <- K_2
   y <- sqrt(Fstat*K_2)
-  
+
   #Function to obtain the CI for the concentration parameter
   u0=Finv(1-alpha,p,0)
   if(y<=u0) ll=0
@@ -41,44 +41,44 @@ girtest=function(Fstat,K_2) {
   bbb=uniroot(f,c(0,big))$root
   lu=y+bbb
   ci_mu=c(ll^2/p,lu^2/p)                                      #CI concentration parameter chi^2 (note the correction!)
-  
-  
+
+
   #Tables with critical values:
-  library(readxl) 
-  bias <- read_excel("~/Desktop/BGSE/Master's Thesis/Code/Tables critical values.xlsx", sheet = "bias n=1")
+  library(readxl)
+  bias <- read_excel("~/Desktop/BGSE/Master Thesis/Code/Tables critical values.xlsx", sheet = "bias n=1")
   bias[,1] <- NULL
-  size <- read_excel("~/Desktop/BGSE/Master's Thesis/Code/Tables critical values.xlsx", sheet = "size n=1")
+  size <- read_excel("~/Desktop/BGSE/Master Thesis/Code/Tables critical values.xlsx", sheet = "size n=1")
   size[,1] <- NULL
-  
-  
+
+
   #Take the corresponding values from the table corresponding to the previous CI
   low_mu <- round(ci_mu[1],digits = 2)
   high_mu <- round(ci_mu[2],digits = 2)
 
-  
+
   x = as.numeric(colnames(bias))
   y = as.numeric(colnames(size))
-  
+
 
   column_low_bias =  which(abs(x - low_mu) == min(abs(x - low_mu)))
   column_high_bias = which(abs(x - high_mu) == min(abs(x - high_mu)))
-  
+
   column_low_size =  which(abs(y - low_mu) == min(abs(y - low_mu)))
   column_high_size = which(abs(y - high_mu) == min(abs(y - high_mu)))
 
   bias_low <- as.numeric(unlist(bias[p-1, column_high_bias ]))
   bias_high <- as.numeric(unlist(bias[p-1, column_low_bias]))
-  
+
   size_low <- as.numeric(as.character(unlist(size[p, column_high_size])))
   size_high <- as.numeric(as.character(unlist(size[p, column_low_size])))
-  
-  
+
+
   #Create the final table and display the results
   cat("\nConfidence intervals by Ganics, Inoue and Rossi (2018)\n\n")
   cat(c("Concentration Parameter", "[",low_mu,";", high_mu,"]"),"\n")
   cat(c("Bias                   ", "[",bias_low,";", bias_high,"]"),"\n")
   cat(c("Size distortion        ", "[",size_low,";", size_high,"]"),"\n")
-  
+
 }
 
 

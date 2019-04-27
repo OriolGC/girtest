@@ -43,19 +43,16 @@ girtest(Fstat, K_2)
 %% ~~objects to See Also as \code{\link{help}}, ~~~
 }
 \examples{
-##---- Should be DIRECTLY executable !! ----
-##-- ==>  Define data, use random,
-##--	or do  help(data=index)  for the standard data sets.
+## Replication of Angrist and Krueger (1991) & Bound et al. (1995)
+# Angrist and Krueger (1991): 28 instruments and F-stat = 1.61
+girtest(Fstat = 1.61, K_2 = 28)
 
-## The function is currently defined as
-function (x)
-{ Example of use: Replication of Angrist and Krueger (1991)/Bound et al. (1995)
-  Angrist and Krueger (1991): 28 instruments and F-stat = 1.61 --> girtest(Fstat = 1.61, K_2 = 28)
-  Bound et al. (1995): 3 instruments and F-stat = 13.49        --> girtest(Fstat = 13.49, K_2 = 3)
+# Bound et al. (1995): 3 instruments and F-stat = 13.49
+girtest(Fstat = 13.49, K_2 = 3)
 
   }
-}
+
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }% use one of  RShowDoc("KEYWORDS")
-\keyword{ ~kwd2 }% __ONLY ONE__ keyword per line
+\keyword{ Confidence interval }% use one of  RShowDoc("KEYWORDS")
+\keyword{ Weak instruments }% __ONLY ONE__ keyword per line
