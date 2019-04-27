@@ -41,10 +41,10 @@ girtest=function(Fstat,K_2) {
 
 
   #Tables with critical values:
-  library(readxl)
-  bias <- read_excel("~/Desktop/BGSE/Master Thesis/Code/Tables critical values.xlsx", sheet = "bias n=1")
+  #library(readxl)
+  bias <- readxl::read_excel("~/Desktop/BGSE/Master Thesis/Code/Tables critical values.xlsx", sheet = "bias n=1")
   bias[,1] <- NULL
-  size <- read_excel("~/Desktop/BGSE/Master Thesis/Code/Tables critical values.xlsx", sheet = "size n=1")
+  size <- readxl::read_excel("~/Desktop/BGSE/Master Thesis/Code/Tables critical values.xlsx", sheet = "size n=1")
   size[,1] <- NULL
 
 
@@ -78,6 +78,7 @@ girtest=function(Fstat,K_2) {
 
 }
 
+if(getRversion() >= "2.15.1")  utils::globalVariables(c("read_excel"))
 
 ## Example of use: Replication Angrist and Krueger (1991)/Bound et al. (1995)
 # Angrist and Krueger (1991): 28 instruments and F-stat = 1.61 at the 5% level
