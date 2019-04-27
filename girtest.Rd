@@ -28,20 +28,11 @@ girtest(Fstat, K_2)
 %% ...
 }
 \references{Ganics, Inoue and Rossi (2018)
-%% ~put references to the literature/web site here ~
 }
 \author{Oriol Gonzalez and Marko Irisarri
-%%  ~~who you are~~
-}
-\note{
-%%  ~~further notes~~
 }
 
-%% ~Make other sections like Warning with \section{Warning }{....} ~
 
-\seealso{
-%% ~~objects to See Also as \code{\link{help}}, ~~~
-}
 \examples{
 ## Replication of Angrist and Krueger (1991) & Bound et al. (1995)
 # Angrist and Krueger (1991): 28 instruments and F-stat = 1.61
