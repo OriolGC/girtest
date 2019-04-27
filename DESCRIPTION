@@ -1,10 +1,10 @@
 Package: girtest
 Type: Package
 Title: Confidence Intervals for the Strength of Identification
-Version: 3.5.3
+Version: 0.1.0
 Author: Oriol Gonzalez and Marko Irisarri
-Maintainer: The package maintainer <yourself@somewhere.net>
-Description: This function computes confidence intervals for the concentration parameter, the bias of the 2SLS estimator and for the size distortion of the associated Wald statistic (5\%nominal level). Proposition 1 in Ganics, Inoue and Rossi (2018).
-License: What license is it under?
+Maintainer: Oriol Gonzalez <oriol.gonzalez@barcelonagse.eu>
+Description: Confidence intervals for the strength of identification.
+License: MIT
 Encoding: UTF-8
 LazyData: true
