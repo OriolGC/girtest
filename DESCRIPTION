@@ -5,6 +5,6 @@ Version: 0.1.0
 Author: Oriol Gonzalez and Marko Irisarri
 Maintainer: Oriol Gonzalez <oriol.gonzalez@barcelonagse.eu>
 Description: Confidence intervals for the strength of identification.
-License: MIT
+License: GPL-2
 Encoding: UTF-8
 LazyData: true

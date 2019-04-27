@@ -7,19 +7,16 @@
 ## Code by Oriol Gonzalez and Marko Irisarri
 
 
-
-# Consider y^2 ~ \chi^2_p(\lambda^2)
-# Given y, we can find a (1-\alpha) confidence interval for \lambda.
-
-# Create the chi-squared function and then invert the chi (not the chi-squared!)
-F=function(u,p,lambda) pchisq(u^2,p,lambda^2)                 # cdf of noncentrality parameter
-Finv=function(prob,p,lambda) sqrt(qchisq(prob,p,lambda^2))    # quantile
-
-
 # Symmetric range CI (inspired by John T Kent (2005))
 girtest=function(Fstat,K_2) {
   # Fstat is the F-statistic of the instruments in the first stage
   # K_2 is the number of instruments
+
+
+  # Create the chi-squared function and then invert the chi (not the chi-squared!)
+  F=function(u,p,lambda) pchisq(u^2,p,lambda^2)                 # cdf of noncentrality parameter
+  Finv=function(prob,p,lambda) sqrt(qchisq(prob,p,lambda^2))    # quantile
+
 
   options(warn=-1)                                            # remove warnings in output
 
