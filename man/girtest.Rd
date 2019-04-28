@@ -4,7 +4,7 @@
 \title{Confidence Intervals for the Strength of Identification
 %%  ~~function to do ... ~~
 }
-\description{\code{girtest} computes confidence intervals for the concentration parameter, for the bias of the 2SLS estimator and for the size distortion of the associated Wald test (5\% nominal level).
+\description{\pkg{girtest} computes confidence intervals for the concentration parameter, for the bias of the 2SLS estimator and for the size distortion of the associated Wald test (5\% nominal level).
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
