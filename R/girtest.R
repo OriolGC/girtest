@@ -43,11 +43,11 @@ girtest=function(Fstat,K_2) {
   #Tables with critical values:
   bias <- read.csv("https://raw.githubusercontent.com/OriolGC/girtest/master/Table_cv_b.csv", header = TRUE, sep = ";", quote = "\"", dec = ".", fill = TRUE, comment.char = "")
   bias[,1] <- NULL
-
   x <- as.numeric(gsub("X", "", colnames(bias)))
   x[1] = 0
 
-  size <- read.csv("https://raw.githubusercontent.com/OriolGC/girtest/master/Table_cv_s.csv", header = TRUE, sep = ";")
+  size <- read.csv("https://raw.githubusercontent.com/OriolGC/girtest/master/Table_cv_s.csv", header = TRUE, sep = ";", quote = "\"", dec = ".", fill = TRUE, comment.char = "")
+  size[,1] <- NULL
   y <- as.numeric(gsub("X", "", colnames(size)))
   y[1] = 0
 
