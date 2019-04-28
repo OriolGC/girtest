@@ -46,7 +46,7 @@ girtest=function(Fstat,K_2) {
   x <- as.numeric(gsub("X", "", colnames(bias)))
   x[1] = 0
 
-  size <- read.csv("https://raw.githubusercontent.com/OriolGC/girtest/master/Table_cv_s.csv", header = TRUE, sep = ";", quote = "\"", dec = ".", fill = TRUE, comment.char = "")
+  size <- read.csv("https://raw.githubusercontent.com/OriolGC/girtest/master/Table_cv_s.csv", header = TRUE, sep = ";")
   size[,1] <- NULL
   y <- as.numeric(gsub("X", "", colnames(size)))
   y[1] = 0
@@ -63,11 +63,11 @@ girtest=function(Fstat,K_2) {
   column_low_size =  which(abs(y - low_mu) == min(abs(y - low_mu)))
   column_high_size = which(abs(y - high_mu) == min(abs(y - high_mu)))
 
-  bias_low <- as.numeric(unlist(bias[p-1, column_high_bias ]))
+  bias_low <- as.numeric(unlist(bias[p-1, column_high_bias]))
   bias_high <- as.numeric(unlist(bias[p-1, column_low_bias]))
 
   size_low <- as.numeric(as.character(unlist(size[p, column_high_size])))
-  size_high <- as.numeric(as.character(unlist(size[p, column_low_size])))
+  size_high <- as.numeric(as.character(unlist(size[p, min(column_low_size)])))
 
 
   #Create the final table and display the results
