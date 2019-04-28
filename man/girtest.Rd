@@ -27,7 +27,7 @@ girtest(Fstat, K_2)
 %%  \item{comp2 }{Description of 'comp2'}
 %% ...
 }
-\references{Ganics, Inoue and Rossi (2018). Confidence intervals for bias and size distortion in IV and local projections-IV models. \emph{italics}{Banco de Espa\~{n}a Working Paper}.
+\references{Ganics, Inoue and Rossi (2018). Confidence intervals for bias and size distortion in IV and local projections-IV models. \emph{Banco de España Working Paper}.
 }
 \author{Oriol Gonzalez and Marko Irisarri
 }
