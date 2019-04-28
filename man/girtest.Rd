@@ -4,7 +4,7 @@
 \title{Confidence Intervals for the Strength of Identification
 %%  ~~function to do ... ~~
 }
-\description{This function computes confidence intervals for the concentration parameter, for the bias of the 2SLS estimator and for the size distortion of the associated Wald test (5\% nominal level). Proposition 1 in Ganics, Inoue and Rossi (2018).
+\description{\pkg{girtest} computes confidence intervals for the concentration parameter, for the bias of the 2SLS estimator and for the size distortion of the associated Wald test (5\% nominal level).
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
@@ -17,7 +17,7 @@ girtest(Fstat, K_2)
 }
   \item{K_2}{Number of instruments (excluded exogenous variables) used in the first-stage regression.}
 }
-\details{Note it is only applicable when there is only one endogenous regressor, and under homoskedasticity and serial uncorrelation.
+\details{This function computes the test proposed in Proposition 1 in Ganics, Inoue and Rossi (2018). Note it is only applicable when there is only one endogenous regressor, and under homoskedasticity and serial uncorrelation. The maximum number of instruments supported is 30.
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{Three 95\% asymptotic level confidence intervals: for the concentration parameter; for the bias of the 2SLS estimator; and for the size distortion of the associated Wald statistic. The critical values are computed using the tables in Appendix D in Ganics, Inoue and Rossi (2018), Table D.7 (bias) and Table D.10 (size distortion).
