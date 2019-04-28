@@ -4,7 +4,7 @@
 \title{Confidence Intervals for the Strength of Identification
 %%  ~~function to do ... ~~
 }
-\description{This function computes confidence intervals for the concentration parameter, for the bias of the 2SLS estimator and for the size distortion of the associated Wald statistic (5\% nominal level). Proposition 1 in Ganics, Inoue and Rossi (2018).
+\description{This function computes confidence intervals for the concentration parameter, for the bias of the 2SLS estimator and for the size distortion of the associated Wald test (5\% nominal level). Proposition 1 in Ganics, Inoue and Rossi (2018).
 %%  ~~ A concise (1-5 lines) description of what the function does. ~~
 }
 \usage{
