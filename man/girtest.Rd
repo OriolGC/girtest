@@ -17,7 +17,7 @@ girtest(Fstat, K_2)
 }
   \item{K_2}{Number of instruments (excluded exogenous variables) used in the first-stage regression.}
 }
-\details{This function computes the test proposed in Proposition 1 in Ganics, Inoue and Rossi (2018). Note it is only applicable when there is only one endogenous regressor, and under homoskedasticity and serial uncorrelation. The maximum number of instruments supported is 30.
+\details{This function computes the test proposed in Proposition 1 in Ganics, Inoue and Rossi (2018). Note it is only applicable when there is only one endogenous regressor, and under homoskedasticity and serial uncorrelation. The maximum number of instruments supported is 30. Note that the bias only exists in overidentified models.
 %%  ~~ If necessary, more details than the description above ~~
 }
 \value{Three 95\% asymptotic level confidence intervals: for the concentration parameter; for the bias of the 2SLS estimator; and for the size distortion of the associated Wald statistic. The critical values are computed using the tables in Appendix D in Ganics, Inoue and Rossi (2018), Table D.7 (bias) and Table D.10 (size distortion).
