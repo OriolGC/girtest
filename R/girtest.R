@@ -71,7 +71,7 @@ girtest=function(Fstat,K_2) {
 
 
   #Create the final table and display the results
-  cat("\nConfidence intervals by Ganics, Inoue and Rossi (2018)\n\n")
+  cat(underline$bold("\nConfidence intervals by Ganics, Inoue and Rossi (2018)\n\n"))
   cat(c("Concentration Parameter", "[",low_mu,";", high_mu,"]"),"\n")
   cat(c("Bias                   ", "[",bias_low,";", bias_high,"]"),"\n")
   cat(c("Size distortion        ", "[",size_low,";", size_high,"]"),"\n")
