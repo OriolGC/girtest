@@ -1,5 +1,0 @@
-exportPattern("^[[:alpha:]]+")
-importFrom("stats", "pchisq", "qchisq", "uniroot")
-import(readxl)
-importFrom("utils", "read.csv")
-import(crayon)
